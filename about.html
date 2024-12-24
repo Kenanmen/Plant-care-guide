@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plants in Addis Ababa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .plant {
+            margin: 2rem 0;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .plant:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More dynamic hover */
+        }
+
+        .plant img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .plant h2 {
+            color: #4CAF50;
+        }
+
+        .care-guide {
+            background-color: #e8f5e9;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        .modal.open {
+            display: block;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 8px;
+            animation: modalEntry 0.4s ease-in-out;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Modal animation */
+        @keyframes modalEntry {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <main>
+        <!-- Norfolk Island Pine -->
+        <section class="plant">
+            <h2>Norfolk Island Pine</h2>
+            <img src="images/norfolk.png" alt="Norfolk Island Pine">
+            <p><strong>Also known as:</strong> Star pine, Living Christmas tree, House Pine</p>
+            <p>Norfolk Island Pine (Araucaria heterophylla) is a conifer tree native to Norfolk Island, a small island in the Pacific Islands. It is a popular houseplant worldwide but is endangered in the wild.</p>
+            <button onclick="openModal('norfolk')">More Info</button>
+        </section>
+
+        <!-- Cabbage Palm -->
+        <section class="plant">
+            <h2>Cabbage Palm</h2>
+            <img src="images/cabbage.png" alt="Cabbage Palm">
+            <p><strong>Also known as:</strong> Sabal Palm, Swamp Cabbage</p>
+            <p>Cabbage Palm can grow up to 20m. These trees add a tropical feel and are resistant to high winds and salt, making them ideal for coastal gardens.</p>
+            <button onclick="openModal('cabbage')">More Info</button>
+        </section>
+
+        <!-- Abyssinian Banana -->
+        <section class="plant">
+            <h2>Abyssinian Banana</h2>
+            <img src="images/abbysinianbanana.png" alt="Abyssinian Banana">
+            <p><strong>Also known as:</strong> Ethiopian Banana, Ensete</p>
+            <p>The Abyssinian Banana (Ensete ventricosum) is a vital component of Ethiopian food security, with uses ranging from food to fiber and eco-friendly packaging.</p>
+            <button onclick="openModal('abyssinian')">More Info</button>
+        </section>
+
+        <!-- Rubber Tree -->
+        <section class="plant">
+            <h2>Rubber Tree</h2>
+            <img src="images/Rubbertree.png" alt="Rubber Tree">
+            <p><strong>Also known as:</strong> Rubber Fig, Indian Rubber Plant</p>
+            <p>Rubber Tree (Ficus elastica) is a large ornamental tree with glossy leaves. It can be grown indoors or outdoors in suitable climates.</p>
+            <button onclick="openModal('rubber')">More Info</button>
+        </section>
+
+        <!-- Weeping Fig -->
+        <section class="plant">
+            <h2>Weeping Fig</h2>
+            <img src="images/weepingfig.png" alt="Weeping Fig">
+            <p><strong>Also known as:</strong> Benjamin Fig, Benjamina Ficus</p>
+            <p>Weeping fig (Ficus benjamina) is an evergreen tree native to Asia and Australia. It is a popular houseplant known for its elegant, glossy leaves. However, it can cause allergies and its parts are poisonous except for the fruit.</p>
+            <button onclick="openModal('weeping')">More Info</button>
+        </section>
+    </main>
+
+    <!-- Modal for Norfolk Island Pine -->
+    <div id="norfolk" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('norfolk')">&times;</span>
+            <h3>Norfolk Island Pine Care Guide</h3>
+            <ul>
+                <li><strong>Water:</strong> Every 1-2 weeks, letting soil dry slightly between waterings.</li>
+                <li><strong>Sunlight:</strong> Partial sun.</li>
+                <li><strong>Temperature:</strong> 20 - 38 ℃.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal for Cabbage Palm -->
+    <div id="cabbage" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cabbage')">&times;</span>
+            <h3>Cabbage Palm Care Guide</h3>
+            <ul>
+                <li><strong>Water:</strong> Every 1-2 weeks with consistent moisture.</li>
+                <li><strong>Sunlight:</strong> Full sun.</li>
+                <li><strong>Temperature:</strong> 20 - 38 ℃.</li>
+                <li><strong>Soil Type:</strong> Garden soil.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal for Abyssinian Banana -->
+    <div id="abyssinian" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('abyssinian')">&times;</span>
+            <h3>Abyssinian Banana Care Guide</h3>
+            <ul>
+                <li><strong>Water:</strong> Weekly, ensuring consistent moisture.</li>
+                <li><strong>Sunlight:</strong> Full sun.</li>
+                <li><strong>Temperature:</strong> 20 - 38 ℃.</li>
+                <li><strong>Soil Type:</strong> Garden soil.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal for Rubber Tree -->
+    <div id="rubber" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('rubber')">&times;</span>
+            <h3>Rubber Tree Care Guide</h3>
+            <ul>
+                <li><strong>Water:</strong> Every 1-2 weeks, allowing slight soil drying.</li>
+                <li><strong>Sunlight:</strong> Partial sun.</li>
+                <li><strong>Temperature:</strong> 20 - 38 ℃.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal for Weeping Fig -->
+    <div id="weeping" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('weeping')">&times;</span>
+            <h3>Weeping Fig Care Guide</h3>
+            <ul>
+                <li><strong>Water:</strong> Every 1-2 weeks, keeping the soil moist but not soggy.</li>
+                <li><strong>Sunlight:</strong> Partial sun.</li>
+                <li><strong>Temperature:</strong> 20 - 38 ℃.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <nav>
+            <a href="index.html">Back</a>
+        </nav>
+        <p>&copy; 2024 Plants in Addis Ababa | <a href="home.html">Back to Home</a></p>
+    </footer>
+
+    <script>
+        function openModal(plantId) {
+            document.getElementById(plantId).classList.add('open');
+        }
+
+        function closeModal(plantId) {
+            document.getElementById(plantId).classList.remove('open');
+        }
+    </script>
+</body>
+</html>

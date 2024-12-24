@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Plants in Addis Ababa</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f8f6;
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+        }
+
+        /* Header Styling */
+        header {
+            background-color: rgba(28, 150, 65, 0.623);
+            color: rgb(238, 231, 231);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            margin-left: auto;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #4CAF50;
+        }
+
+        /* Hero Section with Parallax Effect */
+        .hero {
+            height: 100vh;
+            background-image: url('images/plantcare.png'); 
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            background-attachment: fixed; /* Parallax effect */
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin: 0;
+            animation: fadeInUp 2s ease-in-out; /* Added animation for text */
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            animation: fadeInUp 2s ease-in-out 0.5s; /* Delayed animation */
+        }
+        .hero button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            animation: fadeInUp 2s ease-in-out 1s; /* Delayed animation */
+        }
+        .hero button:hover {
+            background-color: #45a049;
+        }
+
+        /* Scroll Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>plant care</h1>
+        <nav>
+            <a href="about.html">About</a> <!-- Link to Home -->
+             
+        </nav>
+    </header>
+
+    <!-- Hero Section with Dynamic Scroll Effects -->
+    <section class="hero">
+        <h2>Welcome to Your Plant Care Guide</h2>
+        <p>Discover how to take care of plants that thrive in Addis Ababa</p>
+        <button onclick="window.location.href='about.html'">Learn More</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Plants in Addis Ababa</p>
+    </footer>
+
+</body>
+</html>
