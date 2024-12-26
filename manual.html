@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Moisture Sensor Manual</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        nav {
+            flex: 1;
+            max-width: 250px;
+            margin-right: 2rem;
+            padding: 1rem;
+            background-color: #e8f5e9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 1rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0.5rem 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #4CAF50;
+            padding: 0.5rem;
+            display: block;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #c8e6c9;
+        }
+
+        .content {
+            flex: 3;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        section h2 {
+            color: #4CAF50;
+        }
+
+        .component img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Soil Moisture Sensor Manual</h1>
+    </header>
+    
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#components">Components</a></li>
+                <li><a href="#setup">Setup Instructions</a></li>
+                <li><a href="#usage">Usage Guidelines</a></li>
+                <li><a href="#maintenance">Maintenance Tips</a></li>
+                <li><a href="#safety">Safety Precautions</a></li>
+                <li><a href="#applications">Applications</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <section id="introduction">
+                <h2>Introduction</h2>
+                <p>The soil moisture sensor is an essential tool designed to measure the water content in soil accurately. By providing real-time data, it helps gardeners, farmers, and researchers ensure optimal soil conditions for plant growth. This sensor is particularly useful for automated irrigation systems, greenhouse monitoring, and various agricultural applications. With proper setup and maintenance, this device offers reliable performance and contributes to sustainable water management practices.</p>
+            </section>
+
+            <section id="components">
+                <h2>Components</h2>
+                <div class="component">
+                    <h3>1. Soil Moisture Sensor</h3>
+                    <img src="soilmoisture.png" alt="Soil Moisture Sensor">
+                    <p>Detects the moisture level in the soil by measuring electrical conductivity. The probe is inserted into the soil to gather data.</p>
+                </div>
+                <div class="component">
+                    <h3>2. Connecting Wires</h3>
+                    <img src="connectingwire.png" alt="Connecting Wires">
+                    <p>Used to connect the sensor, controller, and other components. These ensure stable signal transmission and power supply.</p>
+                </div>
+                
+                <div class="component">
+                    <h3>3. Power Supply</h3>
+                    <img src="powersource1.png" alt="Power Supply">
+                    <img src="powersource2.png" alt="Power Supply">
+                    <p>Provides a stable voltage (3.3V or 5V) required to power the entire system. It can be a battery or an adapter.</p>
+                </div>
+                <div class="component">
+                    <h3>4. Relay Module</h3>
+                    <img src="relay.png" alt="Relay Module">
+                    <p>Acts as a switch to control the water pump based on the sensor readings. Ensures efficient irrigation management.</p>
+                </div>
+                <div class="component">
+                    <h3>5. Water Pump</h3>
+                    <img src="waterpump.png" alt="Water Pump">
+                    <p>Pumps water to the soil as required. Connects to the relay module and responds automatically to soil moisture levels.</p>
+                </div>
+            </section>
+
+            <section id="setup">
+                <h2>Setup Instructions</h2>
+                <p>To set up the soil moisture sensor system, follow these steps:</p>
+                <ol>
+                    <li>Insert the soil moisture sensor into the soil to the recommended depth.</li>
+                    <li>Connect the sensor to the controller board using the provided wires.</li>
+                    <li>Attach the relay module to the controller and connect the water pump to the relay.</li>
+                    <li>Provide a stable power supply (3.3V or 5V) to the controller board.</li>
+                    <li>Power on the system and ensure all components are functioning as intended.</li>
+                </ol>
+            </section>
+
+            <section id="usage">
+                <h2>Usage Guidelines</h2>
+                <p>Follow these guidelines to ensure optimal performance:</p>
+                <ul>
+                    <li>Insert the sensor probe carefully into the soil for accurate readings.</li>
+                    <li>Ensure the power supply is stable and sufficient for all components.</li>
+                    <li>Monitor the system periodically to prevent any malfunctions.</li>
+                </ul>
+            </section>
+
+            <section id="maintenance">
+                <h2>Maintenance Tips</h2>
+                <ul>
+                    <li>Clean the sensor probe with a damp cloth to remove soil residues.</li>
+                    <li>Store components in a dry place when not in use.</li>
+                    <li>Regularly inspect the water pump for blockages or wear.</li>
+                </ul>
+            </section>
+
+            <section id="safety">
+                <h2>Safety Precautions</h2>
+                <ul>
+                    <li>Avoid immersing the entire sensor or relay in water.</li>
+                    <li>Disconnect from the power supply before cleaning.</li>
+                    <li>Handle the sensor probe gently to avoid damage.</li>
+                </ul>
+            </section>
+
+            <section id="applications">
+                <h2>Applications</h2>
+                <p>The soil moisture sensor system is suitable for:</p>
+                <ul>
+                    <li>Automated irrigation systems.</li>
+                    <li>Greenhouse and agricultural monitoring.</li>
+                    <li>Soil research and analysis.</li>
+                    <li>Home gardening and landscaping.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
