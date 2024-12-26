@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Plants in Addis Ababa</title>
+    <title>Smart Plant Care</title>
     <style>
         /* General Body Styling */
         body {
@@ -16,8 +16,8 @@
 
         /* Header Styling */
         header {
-            background-color: rgba(28, 150, 65, 0.623);
-            color: rgb(238, 231, 231);
+            background-color: rgba(28, 150, 65, 0.9);
+            color: white;
             padding: 1rem;
             position: fixed;
             width: 100%;
@@ -26,50 +26,50 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         header h1 {
             margin: 0;
+            font-size: 1.8rem;
         }
         nav {
             margin-left: auto;
+            margin-right: 20px;
         }
         nav a {
             color: white;
             margin: 0 1rem;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             transition: color 0.3s ease;
         }
         nav a:hover {
-            color: #4CAF50;
+            color: #c8e6c9;
         }
 
-        /* Hero Section with Parallax Effect */
+        /* Hero Section Styling */
         .hero {
             height: 100vh;
-            background-image: url('plantcare.png'); 
+            background-image: url('plantcare.png');
             background-size: cover;
             background-position: center;
-            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             flex-direction: column;
+            color: white;
             position: relative;
-            overflow: hidden;
-            background-attachment: fixed; /* Parallax effect */
         }
-
         .hero h2 {
             font-size: 3rem;
             margin: 0;
-            animation: fadeInUp 2s ease-in-out; /* Added animation for text */
+            animation: fadeInUp 2s ease-in-out;
         }
         .hero p {
             font-size: 1.5rem;
             margin: 1rem 0;
-            animation: fadeInUp 2s ease-in-out 0.5s; /* Delayed animation */
+            animation: fadeInUp 2s ease-in-out 0.5s;
         }
         .hero button {
             background-color: #4CAF50;
@@ -80,13 +80,12 @@
             cursor: pointer;
             border-radius: 4px;
             transition: background-color 0.3s ease;
-            animation: fadeInUp 2s ease-in-out 1s; /* Delayed animation */
+            animation: fadeInUp 2s ease-in-out 1s;
         }
         .hero button:hover {
             background-color: #45a049;
         }
 
-        /* Scroll Animation */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -96,6 +95,22 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+        }
+
+        /* Introduction Section Styling */
+        .introduction {
+            padding: 4rem 2rem;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .introduction h2 {
+            font-size: 2.5rem;
+            color: #4CAF50;
+        }
+        .introduction p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            color: #555;
         }
 
         /* Footer Styling */
@@ -113,24 +128,38 @@
 <body>
 
     <header>
-        <h1>plant care</h1>
+        <h1>Smart Plant Care</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a> 
-             
+            <a href="about.html">About</a>
+            <a href="plantcare.html">Plant Care Guide</a>
+            <a href="manual.html">Manual</a>
         </nav>
     </header>
 
-    <!-- Hero Section with Dynamic Scroll Effects -->
+    <!-- Hero Section -->
     <section class="hero">
-        <h2>Welcome to Your Plant Care Guide</h2>
-        <p>Discover how to take care of plants that thrive in Addis Ababa</p>
+        <h2>Welcome to Smart Plant Care</h2>
+        <p>Your ultimate solution for sustainable and intelligent plant care.</p>
         <button onclick="window.location.href='about.html'">Learn More</button>
     </section>
 
+    <!-- Introduction Section -->
+    <section class="introduction">
+        <h2>About Our Website</h2>
+        <p>
+            Smart Plant Care provides innovative solutions for plant lovers and farmers alike. Our website offers:
+            a detailed <strong>Plant Care Guide</strong> for common plants, a comprehensive <strong>User Manual</strong> for our Soil Moisture Sensor,
+            and insights on how smart plant care can contribute to a sustainable future. Explore how technology and nature can coexist to
+            achieve global environmental goals.
+        </p>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Plants in Addis Ababa</p>
+        <p>&copy; 2024 Smart Plant Care</p>
     </footer>
 
 </body>
 </html>
+
+           
+      
